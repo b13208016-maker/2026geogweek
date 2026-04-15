@@ -714,7 +714,6 @@
       <div class="modal-subtitle">
         請於 5/11–5/15 至攤位取貨付款
       </div>
-    </div>
 
       <div class="order-summary-section">
         <div class="order-summary-title">訂購明細</div>
@@ -982,7 +981,7 @@ function updateCartTotal() {
 function openModal() {
   buildOrderSummary();
   document.getElementById('modal-overlay').classList.add('open');
-  document.getElementById('checkout-view').style.display = '';
+  document.getElementById('checkout-view').style.display = 'block';
   document.getElementById('success-view').style.display = 'none';
 }
 
@@ -1106,7 +1105,7 @@ function submitOrder() {
 
 function showSuccess() {
   document.getElementById('checkout-view').style.display = 'none';
-  document.getElementById('success-view').style.display = '';
+  document.getElementById('success-view').style.display = 'flex';
 }
 
 function resetAll() {
