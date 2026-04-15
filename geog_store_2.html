@@ -991,7 +991,9 @@ function buildOrderSummary() {
   // Sticker discount
   const a2q = cart['a2'] || 0;
   const a3q = cart['a3'] || 0;
-  const stickerPairs = Math.min(a2q, a3q);
+  const totalStickers = a2q + a3q;
+  const pairs = Math.floor(totalStickers / 2);
+
   if (stickerPairs > 0) {
     rows += `<div class="order-item-row">
       <span class="order-item-name" style="color:#A07800;">✓ 雙貼紙組合優惠</span>
