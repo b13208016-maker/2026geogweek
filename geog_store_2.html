@@ -994,7 +994,7 @@ function buildOrderSummary() {
   const totalStickers = a2q + a3q;
   const pairs = Math.floor(totalStickers / 2);
 
-  if (stickerPairs > 0) {
+  if (pairs > 0) {
     rows += `<div class="order-item-row">
       <span class="order-item-name" style="color:#A07800;">✓ 雙貼紙組合優惠</span>
       <span class="order-item-qty">× ${pairs}</span>
@@ -1059,7 +1059,7 @@ function submitOrder() {
   const a3q = cart['a3'] || 0;
   const totalStickers = a2q + a3q;
   const pairs = Math.floor(totalStickers / 2);
-  if (stickerPairs > 0) itemLines.push(`雙貼紙優惠 x${stickerPairs} (-NT$${stickerPairs * 10})`);
+  if (pairs > 0) itemLines.push(`雙貼紙優惠 x${pairs} (-NT$${pairs * 10})`);
   for (const combo of COMBOS) {
     const qty = comboQty[combo.id] || 0;
     if (qty <= 0) continue;
