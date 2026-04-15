@@ -1055,7 +1055,8 @@ function submitOrder() {
   }
   const a2q = cart['a2'] || 0;
   const a3q = cart['a3'] || 0;
-  const stickerPairs = Math.min(a2q, a3q);
+  const totalStickers = a2q + a3q;
+  const pairs = Math.floor(totalStickers / 2);
   if (stickerPairs > 0) itemLines.push(`雙貼紙優惠 x${stickerPairs} (-NT$${stickerPairs * 10})`);
   for (const combo of COMBOS) {
     const qty = comboQty[combo.id] || 0;
